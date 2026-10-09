@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+:root{--ink:#633d51;--muted:#9a7185;--pink:#ef91b2;--hot:#d85c8a;--paper:#fffafc;--line:#f5dce7;--lilac:#e9e3ff;--peach:#ffe6d9;--mint:#dff4e8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 12% 12%,#fff 0,transparent 36%),linear-gradient(135deg,#fff4f8,#ffebf2 52%,#fff8f1);color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
+button{font:inherit}
+.shell{width:min(900px,100%);margin:auto;padding:22px 24px 56px;position:relative;z-index:1}
+.topline{text-align:center;font-size:.68rem;letter-spacing:.19em;color:#ae7890;font-weight:700;padding:10px 0 28px}
+.tiny-heart{color:#ed8db0;margin:0 9px}
+.hero{position:relative;text-align:center;padding:68px 18px 55px;min-height:480px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.hero-heart{font-size:4.8rem;color:#e88aad;line-height:1;margin-bottom:22px;text-shadow:0 8px 24px #ef91b244;animation:heartbeat 2s ease-in-out infinite}
+.eyebrow{font-size:.68rem;letter-spacing:.2em;font-weight:700;color:#bd7995;margin:0 0 13px}
+h1,h2,h3,p{margin-top:0}
+h1,h2{font-family:'Playfair Display',Georgia,serif;font-weight:500;letter-spacing:-.035em}
+h1{font-size:clamp(3.2rem,9vw,6rem);line-height:1.04;margin-bottom:20px}
+h1 em,h2 em{color:var(--hot);font-weight:500}
+.intro{line-height:1.8;color:#8f687b;font-size:.97rem;margin-bottom:27px}
+.primary{background:var(--hot);color:white;border:0;border-radius:999px;padding:15px 23px;box-shadow:0 9px 22px #d85c8a2b;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.primary:hover{transform:translateY(-3px);box-shadow:0 12px 26px #d85c8a3d}
+.primary span{margin-left:12px}
+.micro{font-size:.76rem;color:#b08095;margin:17px 0 0}
+.sticker{position:absolute;background:#fffdf0;border:1px solid #f6e6b6;box-shadow:0 7px 18px #9e67800e;padding:12px 15px;font-size:.76rem;line-height:1.4;transform:rotate(-10deg);border-radius:5px;color:#a7785f}
+.sticker-one{right:7%;top:55px}
+.hidden{display:none!important}
+.section-heading{text-align:center;padding:45px 0 20px}
+h2{font-size:clamp(2rem,5vw,3.2rem);line-height:1.13;margin-bottom:13px}
+.section-heading h2 span{color:#e69ab5;font-family:serif}
+.section-heading>p:last-child,.notes-section>p:not(.eyebrow){color:#98778a;font-size:.9rem;line-height:1.7}
+.memory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:25px 0}
+.memory-card{background:#fffdfd;border:1px solid #f5e2e9;padding:13px 13px 18px;border-radius:9px;box-shadow:0 12px 30px #a95e8010}
+.tilt-left{transform:rotate(-1.7deg)}.tilt-right{transform:rotate(1.8deg);margin-top:16px}
+.photo-placeholder{height:155px;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:2.6rem;gap:9px;margin-bottom:17px}
+.photo-placeholder span{font-size:.58rem;text-transform:uppercase;letter-spacing:.15em;color:#99748a}
+.lavender{background:var(--lilac)}.peach{background:var(--peach)}.mint{background:var(--mint)}
+.card-label{font-size:.59rem;letter-spacing:.15em;font-weight:700;color:#bd829a;margin-bottom:8px}
+.memory-card h3{font-family:'Playfair Display',Georgia,serif;font-size:1.22rem;font-weight:500;margin-bottom:9px}
+.memory-card>p:last-child{font-size:.79rem;line-height:1.7;color:#927386;margin-bottom:0}
+.edit-hint{text-align:center;font-size:.75rem;color:#a78094;margin:22px 0 70px}
+.notes-section{text-align:center;padding:44px 18px 55px;background:#ffffff85;border:1px solid #fff;border-radius:25px;box-shadow:0 15px 45px #a95e800c}
+.note-buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:25px}
+.note-button{background:#fff;border:1px solid #f0ccdc;color:#a65d7e;border-radius:999px;padding:12px 15px;cursor:pointer;transition:all .2s}
+.note-button:hover{background:#fff0f6;transform:translateY(-2px)}
+.note-reveal{max-width:480px;margin:22px auto 0;padding:20px;border-radius:16px;background:#fff0f6;border:1px dashed #e9a3be;line-height:1.8;animation:appear .3s ease}
+.final-card{text-align:center;margin:60px auto 35px;max-width:650px;background:#fffafc;border:1px solid #f4dfe8;border-radius:26px;padding:42px 30px;box-shadow:0 18px 50px #a95e8010}
+.final-sparkle{color:#e7a0b8;letter-spacing:.6em;margin-bottom:25px}
+.final-card>p:not(.eyebrow):not(.signature):not(.micro){max-width:480px;margin:0 auto 22px;color:#8d6c7d;line-height:1.9;font-size:.91rem}
+.signature{font-family:'Playfair Display',Georgia,serif;font-size:1.22rem;color:#bd6689;margin:28px 0}
+.final-card .micro{min-height:18px}
+footer{text-align:center;color:#b18a9d;font-size:.7rem;padding:15px}
+.ambient span{position:fixed;z-index:0;pointer-events:none;color:#eab3c8;opacity:.45;animation:float 9s ease-in-out infinite}
+.ambient span:nth-child(1){left:5%;top:20%;font-size:25px}.ambient span:nth-child(2){right:8%;top:34%;font-size:20px;animation-delay:-3s}.ambient span:nth-child(3){left:9%;bottom:13%;font-size:32px;animation-delay:-5s}.ambient span:nth-child(4){right:4%;bottom:19%;font-size:23px;animation-delay:-1s}.ambient span:nth-child(5){left:47%;top:7%;font-size:16px;animation-delay:-6s}.ambient span:nth-child(6){right:25%;bottom:6%;font-size:15px;animation-delay:-2s}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#75475e;color:#fff;padding:12px 18px;border-radius:999px;z-index:5;font-size:.86rem;box-shadow:0 8px 28px #633d5133;max-width:90vw}
+@keyframes heartbeat{0%,100%{transform:scale(1)}12%{transform:scale(1.09)}24%{transform:scale(1)}}
+@keyframes float{0%,100%{translate:0 0;rotate:-5deg}50%{translate:0 -18px;rotate:7deg}}
+@keyframes appear{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:680px){.shell{padding:15px 17px 38px}.hero{min-height:440px;padding:55px 4px 40px}.sticker-one{right:0;top:16px;scale:.85}.memory-grid{grid-template-columns:1fr;gap:17px;max-width:390px;margin:20px auto}.memory-card{padding:14px 14px 19px}.tilt-left,.tilt-right{transform:none;margin-top:0}.photo-placeholder{height:125px}.edit-hint{margin-bottom:45px}.notes-section{padding:35px 13px 40px}.note-buttons{flex-direction:column;align-items:stretch}.note-button{width:100%}.final-card{margin-top:42px;padding:35px 19px}.topline{font-size:.58rem;letter-spacing:.12em}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
